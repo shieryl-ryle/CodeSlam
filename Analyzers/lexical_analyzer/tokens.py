@@ -1,7 +1,22 @@
 from enum import Enum
 
 class TokenType(Enum):
-    #Reserved Words
+    #Regular Definitions
+    LC = "abcdefghijklmnopqrstuvwxyz" # Lowercase
+    UC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" # Uppercase
+    ZERO = "0" # Zero
+    DIGIT = "123456789" # Digits
+    NUM = "ZERO + DIGITS" # Numbers
+    ALPHA = "LC + UC" # Alphabets
+    ALPHANUM = "ALPHA + NUM" # Alphanumeric
+    STAT = "True False" # Boolean
+    NEGATIVE = "~" # Negative, Negates the numerical values, making positive negative and vice versa.
+    NEWLINE = "\n" # New Line
+    TAB = "\t" # Tab
+    SPACE = " " # Space
+    WHITE_SPACE = "NEWLINE + TAB + SPACE" # White Space
+    
+    #Regular Expressions
     # Data Types
     FEINT = "Feint"       # Equivalent to int
     CHANT = "Chant"       # Equivalent to str
